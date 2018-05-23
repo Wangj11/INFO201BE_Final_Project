@@ -1,13 +1,10 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-# 
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
+library(dplyr)
+library(ggplot2)
+source("scripts/set_up.R")
+#source("scripts/map1.R")
+
+hate_crimes_names <- colnames(hate_crimes_formatted)
 
 # Define UI for application that draws a histogram
 shinyUI(navbarPage("Our Project",
@@ -34,7 +31,26 @@ shinyUI(navbarPage("Our Project",
   tabPanel("Income Inequality",
     sidebarLayout(
       sidebarPanel(
-        
+        selectInput("income_ineq_x",
+                    label = "X Variable",
+                    choices = list("State" = "state", 
+                      "Median Household Income" = "median_household_income", 
+                      "Gini Index" = "gini_index", 
+                      "Population with HS Degree"  = 
+                        "share_population_with_high_school_degree", 
+                      "Seasonal Unemployed"= "share_unemployed_seasonal", 
+                      "Hate Crime Rates"  = "hate_crimes_per_100k_splc"),
+                    selected = "state"),
+        selectInput("income_ineq_y",
+                    label = "Y Variable",
+                    choices = list("State" = "median_household_income", 
+                      "Median Household Income" = "median_household_income", 
+                      "Gini Index" = "gini_index", 
+                      "Population with HS Degree"  = 
+                        "share_population_with_high_school_degree", 
+                      "Seasonal Unemployed"= "share_unemployed_seasonal", 
+                      "Hate Crime Rates"  = "hate_crimes_per_100k_splc"),
+                    selected = "state")
       ), #sidebarPanel - Income Inequality
       mainPanel(
         
