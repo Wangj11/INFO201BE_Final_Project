@@ -9,12 +9,11 @@ Our [dataset](https://github.com/fivethirtyeight/data/tree/master/hate-crimes) i
 Though many people may want to know the information in this dataset, our intended audience is activists that want to make a change. By answering the questions below and seeing how they correlate, activists will be able to see where to take action and what next steps to take in making the Unites States a safer place for everyone. 
 
 ### Questions
+- Do hate crimes happen in states with more income inequality?
 - Which state has the most hate crime reports?
 - Where are the highest rates of income inequality?
 - Where are the areas of high unemployment?
 - Where are the areas of lowest average income?
-- Where are the areas with the highest non-white populations?
-- How many hate crimes occurr in non-white populations/non-citizens?
 
 
 ## Technical Description
