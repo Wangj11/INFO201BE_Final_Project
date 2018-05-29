@@ -7,10 +7,9 @@ source("scripts/build_map.R")
 hate_crimes_names <- colnames(hate_crimes_formatted)
 
 # Define UI for application that draws a histogram
-shinyUI(navbarPage("Our Project",
+shinyUI(navbarPage("Hate Crimes Data",
   
   # Application title
-  titlePanel("Hate Crimes Data"),
   tabPanel("About",
   # Sidebar with a slider input for number of bins 
     sidebarLayout(
