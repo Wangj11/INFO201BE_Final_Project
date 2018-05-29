@@ -40,7 +40,7 @@ shinyUI(navbarPage("Our Project",
                         "share_population_with_high_school_degree", 
                       "Seasonal Unemployed"= "share_unemployed_seasonal"),
                     selected = "Median Household Income")),
-            mainPanel(plotOutput("by_state")))),
+            mainPanel(plotlyOutput("by_state")))),
   tabPanel("Correlation Charts", 
     sidebarLayout(
       sidebarPanel(

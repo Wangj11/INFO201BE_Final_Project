@@ -5,10 +5,10 @@ source("scripts/set_up.R")
 source("scripts/build_map.R")
 
 shinyServer(function(input, output) {
-  output$by_state <- renderPlot({
+  output$by_state <- renderPlotly({
     return(build_map(hate_crimes_formatted, input$income_ineq))
   }) 
-  output$distPlot <- renderPlot({
+  output$distPlot <- renderPlotly({
     
     # generate bins based on input$bins from ui.R
     x    <- faithful[, 2] 
