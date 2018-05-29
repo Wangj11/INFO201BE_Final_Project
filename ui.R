@@ -10,7 +10,7 @@ hate_crimes_names <- colnames(hate_crimes_formatted)
 shinyUI(navbarPage("Our Project",
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Hate Crimes Data"),
   tabPanel("About",
   # Sidebar with a slider input for number of bins 
     sidebarLayout(
@@ -45,10 +45,10 @@ shinyUI(navbarPage("Our Project",
     sidebarLayout(
       sidebarPanel(
         
-      ), #sidebarPanel - Tab 3
+      ), #sidebarPanel - Correlation Charts
       mainPanel(
         
-      ) #mainPanel - Tab 3
-    ) #sidebarLayout - Tab 3
-  ) #tabPanel - Tab 3
+      ) #mainPanel - Correlation Charts
+    ) #sidebarLayout - Correlation Charts
+  ) #tabPanel - Correlation Charts
 )) #navbarPage
