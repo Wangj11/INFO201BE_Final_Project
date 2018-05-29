@@ -31,32 +31,17 @@ shinyUI(navbarPage("Our Project",
   tabPanel("Income Inequality",
     sidebarLayout(
       sidebarPanel(
-        selectInput("income_ineq_x",
+        selectInput("income_ineq",
                     label = "X Variable",
-                    choices = list("State" = "state", 
+                    choices = list( 
                       "Median Household Income" = "median_household_income", 
                       "Gini Index" = "gini_index", 
                       "Population with HS Degree"  = 
                         "share_population_with_high_school_degree", 
                       "Seasonal Unemployed"= "share_unemployed_seasonal", 
                       "Hate Crime Rates"  = "hate_crimes_per_100k_splc"),
-                    selected = "state"),
-        selectInput("income_ineq_y",
-                    label = "Y Variable",
-                    choices = list("State" = "median_household_income", 
-                      "Median Household Income" = "median_household_income", 
-                      "Gini Index" = "gini_index", 
-                      "Population with HS Degree"  = 
-                        "share_population_with_high_school_degree", 
-                      "Seasonal Unemployed"= "share_unemployed_seasonal", 
-                      "Hate Crime Rates"  = "hate_crimes_per_100k_splc"),
-                    selected = "state")
-      ), #sidebarPanel - Income Inequality
-      mainPanel(
-        
-      ) #mainPanel - Income Inequality
-    ) #sidebarLayout - Income Inequality
-  ), #tabPanel - Income Inequality
+                    selected = "Median Household Income")),
+            mainPanel(plotOutput("by_state")))),
   tabPanel("Tab 3", 
     sidebarLayout(
       sidebarPanel(

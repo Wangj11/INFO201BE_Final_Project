@@ -2,10 +2,12 @@ library(shiny)
 library(dplyr)
 library(ggplot2)
 source("scripts/set_up.R")
-#source("scripts/map1.R")
+source("scripts/build_map.R")
 
 shinyServer(function(input, output) {
-   
+  output$by_state <- renderPlot({
+    return(build_map(hate_crimes_formatted, input$income_ineq))
+  }) 
   output$distPlot <- renderPlot({
     
     # generate bins based on input$bins from ui.R
