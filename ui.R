@@ -2,7 +2,7 @@ library(shiny)
 library(dplyr)
 library(ggplot2)
 source("scripts/set_up.R")
-#source("scripts/map1.R")
+source("scripts/build_map.R")
 
 hate_crimes_names <- colnames(hate_crimes_formatted)
 
@@ -15,16 +15,12 @@ shinyUI(navbarPage("Our Project",
   # Sidebar with a slider input for number of bins 
     sidebarLayout(
       sidebarPanel(
-         sliderInput("bins",
-                     "Number of bins:",
-                     min = 1,
-                     max = 50,
-                     value = 30)
-      ),
+
+      ), #sidebarPanel - About
       
       # Show a plot of the generated distribution
       mainPanel(
-         plotOutput("distPlot")
+
       ) #mainPanel
     ) #sideBarLayout
   ), #tabPanel - Hate Crimes
