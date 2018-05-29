@@ -11,7 +11,7 @@ shinyUI(navbarPage("Our Project",
   
   # Application title
   titlePanel("Old Faithful Geyser Data"),
-  tabPanel("Hate Crimes",
+  tabPanel("About",
   # Sidebar with a slider input for number of bins 
     sidebarLayout(
       sidebarPanel(
@@ -28,7 +28,7 @@ shinyUI(navbarPage("Our Project",
       ) #mainPanel
     ) #sideBarLayout
   ), #tabPanel - Hate Crimes
-  tabPanel("Income Inequality",
+  tabPanel("Maps",
     sidebarLayout(
       sidebarPanel(
         selectInput("income_ineq",
@@ -42,7 +42,7 @@ shinyUI(navbarPage("Our Project",
                       "Hate Crime Rates"  = "hate_crimes_per_100k_splc"),
                     selected = "Median Household Income")),
             mainPanel(plotOutput("by_state")))),
-  tabPanel("Tab 3", 
+  tabPanel("Correlation Charts", 
     sidebarLayout(
       sidebarPanel(
         
