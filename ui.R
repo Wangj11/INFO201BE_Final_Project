@@ -51,7 +51,7 @@ shinyUI(navbarPage("Data Crimes Data",
                     selected = "Median Household Income")
       ), #sidebarPanel - Correlation Charts
       mainPanel(
-        
+        plotlyOutput("scatter")
       ) #mainPanel - Correlation Charts
     ) #sidebarLayout - Correlation Charts
   ) #tabPanel - Correlation Charts
