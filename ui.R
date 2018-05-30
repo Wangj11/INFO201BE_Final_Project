@@ -15,11 +15,23 @@ shinyUI(navbarPage(tags$h1(
     tags$h2("About"),
     tags$link(rel = "stylesheet", type = "text/css", href = "project.css"),
     # Sidebar with a slider input for number of bins
-    sidebarLayout(
-      sidebarPanel(), # sidebarPanel - About
-
-      # Show a plot of the generated distribution
-      mainPanel() # mainPanel
+    sidebarLayout(position = "left",
+      sidebarPanel("About the Team"), # sidebarPanel - About
+      mainPanel(tags$p("This site allows users to observe the correlations
+                       between income inequality and hate crimes. The data used
+                       in this site is a collection of data from a variety of
+                       sources including the Census Bureau, FBI, Southern
+                       Poverty Law Center, Kaiser Family Foundation, and more.
+                       The dataset includes information about median household
+                       income, gini index,and various information about the
+                       status of inhabitants by state as well as the number of 
+                       hate crimes."),
+                tags$p("This site shows the relationship hate crimes and these
+                       various statistics in different ways to see where the
+                       focus should be when trying to lower hate crimes. The
+                       maps and charts allow for comparison between the various
+                       information.")
+                ) # mainPanel
     ) # sideBarLayout
   ), # tabPanel - Hate Crimes
   tabPanel(
