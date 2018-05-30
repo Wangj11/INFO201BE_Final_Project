@@ -6,8 +6,7 @@ source("scripts/set_up.R")
 source("scripts/build_map.R")
 
 # Define UI for application that draws a histogram
-shinyUI(navbarPage(tags$h1(
-                   "Data Crimes Data"),
+shinyUI(navbarPage(tags$h1("Data Crimes Data"),
   theme = shinytheme("sandstone"),
 
   # Application title

@@ -14,5 +14,9 @@ shinyServer(function(input, output) {
   output$scatter <- renderPlotly({
     return(build_scatter(hate_crimes_formatted, input$charts))
   }) 
+  
+  output$static_map <- renderPlotly({
+    return(build_static_map(hate_crimes_formatted))
+  })
 
 })
