@@ -5,8 +5,6 @@ library(shinythemes)
 source("scripts/set_up.R")
 source("scripts/build_map.R")
 
-hate_crimes_names <- colnames(hate_crimes_formatted)
-
 # Define UI for application that draws a histogram
 shinyUI(navbarPage("Data Crimes Data",
   theme = shinytheme("sandstone"),
