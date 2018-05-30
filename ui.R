@@ -5,18 +5,16 @@ library(shinythemes)
 source("scripts/set_up.R")
 source("scripts/build_map.R")
 
-# Define UI for application that draws a histogram
 shinyUI(navbarPage(tags$h1(
                    "Data Crimes Data"),
-  theme = shinytheme("sandstone"),
-
-  # Application title
+                   theme = shinytheme("sandstone"),
+  
+  #Tab 1
   tabPanel(
     tags$h2("About"),
     tags$link(rel = "stylesheet", type = "text/css", href = "project.css"),
-    # Sidebar with a slider input for number of bins
     sidebarLayout(position = "left",
-      sidebarPanel("About the Team"), # sidebarPanel - About
+      sidebarPanel("About the Team"),
       mainPanel(tags$p("This site allows users to observe the correlations
                        between income inequality and hate crimes. The data used
                        in this site is a collection of data from a variety of
@@ -30,10 +28,9 @@ shinyUI(navbarPage(tags$h1(
                        various statistics in different ways to see where the
                        focus should be when trying to lower hate crimes. The
                        maps and charts allow for comparison between the various
-                       information.")
-                ) # mainPanel
-    ) # sideBarLayout
-  ), # tabPanel - Hate Crimes
+                       information.")))),
+  
+  #Tab 2
   tabPanel(
     tags$h2("Maps"),
     sidebarLayout(
@@ -45,14 +42,11 @@ shinyUI(navbarPage(tags$h1(
             "Gini Index" = "gini_index",
             "Population with HS Degree" =
               "share_population_with_high_school_degree",
-            "Seasonal Unemployed" = "share_unemployed_seasonal"
-          ),
-          selected = "Median Household Income"
-        )
-      ),
-      mainPanel(plotlyOutput("by_state"))
-    )
-  ),
+            "Seasonal Unemployed" = "share_unemployed_seasonal"),
+          selected = "Median Household Income")),
+      mainPanel(plotlyOutput("by_state")))),
+  
+  #Tab 3
   tabPanel(
     tags$h2("Correlation Charts"),
     sidebarLayout(
@@ -65,11 +59,8 @@ shinyUI(navbarPage(tags$h1(
                       "Population with HS Degree"  = 
                         "share_population_with_high_school_degree", 
                       "Seasonal Unemployed"= "share_unemployed_seasonal"),
-                    selected = "Median Household Income")
-      ), #sidebarPanel - Correlation Charts
+                    selected = "Median Household Income")),
       mainPanel(
         plotlyOutput("scatter")
-      ) #mainPanel - Correlation Charts
-    ) #sidebarLayout - Correlation Charts
-  ) #tabPanel - Correlation Charts
+      )))
 )) #navbarPage

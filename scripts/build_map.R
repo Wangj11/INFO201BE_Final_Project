@@ -1,9 +1,5 @@
-# BuildMap file: function that returns a plotly map
 library(plotly)
 library(stringr)
-
-# BuildMap function: fill this in with a function that returns a map:
-# Derived from: https://plot.ly/r/choropleth-maps/
 
 build_map <- function(data, map_var) {
   if (map_var == "median_household_income") {
@@ -12,10 +8,10 @@ build_map <- function(data, map_var) {
   else {
     curr_color <- "Population (%)"
   }
-  # give state boundaries a white border
+  # Give state boundaries a white border
   l <- list(color = toRGB("white"), width = 2)
 
-  # specify some map projection/options
+  # Specify some map projection/options
   g <- list(
     scope = "usa",
     projection = list(type = "albers usa"),
