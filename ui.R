@@ -51,7 +51,7 @@ shinyUI(navbarPage(tags$h1("Hate Crimes Data"),
     sidebarLayout(
       sidebarPanel(
         selectInput("compare_maps",
-          label = "Compare With:",
+          label = tags$h3("Compare With:"),
           choices = list(
             "Median Household Income" = "median_household_income",
             "Gini Index" = "gini_index",
@@ -75,7 +75,7 @@ shinyUI(navbarPage(tags$h1("Hate Crimes Data"),
     sidebarLayout(
       sidebarPanel(
         selectInput("charts",
-          label = "Correlate data with:",
+          label = tags$h3("Correlate data with:"),
           choices = list(
             "Median Household Income" = "median_household_income",
             "Gini Index" = "gini_index",
