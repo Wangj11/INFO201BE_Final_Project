@@ -13,7 +13,11 @@ shinyUI(navbarPage(tags$h1("Data Crimes Data"),
     tags$h2("About"),
     tags$link(rel = "stylesheet", type = "text/css", href = "project.css"),
     sidebarLayout(position = "left",
-      sidebarPanel("About the Team"),
+      sidebarPanel(tags$h3("About the Team"),
+                   tags$h3("Raymond Huang", tags$br(),
+                           "Sarah Liu", tags$br(),
+                           "Joseph Wang", tags$br(),
+                           "Yu-won Youn")),
       mainPanel(tags$p("This site allows users to observe the correlations
                        between income inequality and hate crimes. The data used
                        in this site is a collection of data from a variety of
@@ -22,8 +26,8 @@ shinyUI(navbarPage(tags$h1("Data Crimes Data"),
                        The dataset includes information about median household
                        income, gini index,and various information about the
                        status of inhabitants by state as well as the number of 
-                       hate crimes."),
-                tags$p("This site shows the relationship hate crimes and these
+                       hate crimes.",
+                tags$br(), "This site shows the relationship hate crimes and these
                        various statistics in different ways to see where the
                        focus should be when trying to lower hate crimes. The
                        maps and charts allow for comparison between the various

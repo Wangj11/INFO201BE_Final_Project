@@ -25,10 +25,10 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
-  color: white;
-  font-family: "Courier New";
-  text-shadow: 2px 2px 4px #000000;
+  font-size: 22px;
+  color: dimgrey;
+  font-family: "Lucida Console";
+  font-weight: bolder;
 }
 
 h2:hover {
@@ -37,7 +37,7 @@ h2:hover {
 }
 
 p {
-	font-size: 14px;
+	font-size: 18px;
 	color: dimgrey;
 	font-family: "Lucida Console";
 	background-color: #f8f5f0;
