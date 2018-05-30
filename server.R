@@ -8,9 +8,13 @@ source("scripts/build_scatter.R")
 
 
 shinyServer(function(input, output) {
+  
+  #For the maps tab
   output$by_state <- renderPlotly({
     return(build_map(hate_crimes_formatted, input$compare_maps))
   }) 
+  
+  #For the correlation charts tab
   output$scatter <- renderPlotly({
     return(build_scatter(hate_crimes_formatted, input$charts))
   }) 
