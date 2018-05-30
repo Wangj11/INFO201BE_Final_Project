@@ -1,4 +1,25 @@
 div {
-	
-	
+
+
+}
+
+h1 {
+  font-size: 28px;
+  color: silver;
+  font-family: "Lucida Console";
+  text-shadow: 3px 3px 5px #000000;
+}
+
+h2 {
+  font-size: 24px;
+  color: silver;
+  font-family: "Lucida Console";
+  text-shadow: 3px 3px 5px #000000;
+}
+
+h3 {
+  font-size: 24px;
+  color: white;
+  font-family: "Courier New";
+  text-shadow: 2px 2px 4px #000000;
 }

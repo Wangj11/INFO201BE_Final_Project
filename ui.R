@@ -1,16 +1,19 @@
 library(shiny)
 library(dplyr)
 library(ggplot2)
+library(shinythemes)
 source("scripts/set_up.R")
 source("scripts/build_map.R")
 
 hate_crimes_names <- colnames(hate_crimes_formatted)
 
 # Define UI for application that draws a histogram
-shinyUI(navbarPage("Hate Crimes Data",
+shinyUI(navbarPage(tags$h1("Hate Crimes Data"),
+  theme = shinytheme("sandstone"),
   
   # Application title
-  tabPanel("About",
+  tabPanel(tags$h2("About"),
+    tags$link(rel = "stylesheet", type = "text/css", href = "project.css"),
   # Sidebar with a slider input for number of bins 
     sidebarLayout(
       sidebarPanel(
@@ -23,7 +26,7 @@ shinyUI(navbarPage("Hate Crimes Data",
       ) #mainPanel
     ) #sideBarLayout
   ), #tabPanel - Hate Crimes
-  tabPanel("Maps",
+  tabPanel(tags$h2("Maps"),
     sidebarLayout(
       sidebarPanel(
         selectInput("income_ineq",
@@ -36,7 +39,7 @@ shinyUI(navbarPage("Hate Crimes Data",
                       "Seasonal Unemployed"= "share_unemployed_seasonal"),
                     selected = "Median Household Income")),
             mainPanel(plotlyOutput("by_state")))),
-  tabPanel("Correlation Charts", 
+  tabPanel(tags$h2("Correlation Charts"), 
     sidebarLayout(
       sidebarPanel(
         
