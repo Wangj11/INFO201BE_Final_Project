@@ -6,6 +6,14 @@ library(stringr)
 # Derived from: https://plot.ly/r/choropleth-maps/
 
 build_map <- function(data, map.var) {
+  if(map.var == "median_household_income")
+  {
+    curr_color <- "Income ($)"
+  }
+  else
+  {
+    curr_color <- "Population (%)"
+  }
   # give state boundaries a white border
   l <- list(color = toRGB("white"), width = 2)
   
@@ -24,11 +32,11 @@ build_map <- function(data, map.var) {
   p <- plot_geo(data, locationmode = 'USA-states') %>%
     add_trace(
       z = data[,map.var], text = ~state, locations = ~code,
-      color = data[,map.var], colors = 'Purples'
+      color = data[,map.var], colors = 'pink'
     ) %>%
-    colorbar(title = "Color Title") %>%
+    colorbar(title = curr_color) %>%
     layout(
-      title = str_to_title(map.var),
+      title = str_to_title(gsub("_"," ",map.var)),
       geo = g
     )
    return(p)
