@@ -40,7 +40,7 @@ shinyUI(navbarPage("Hate Crimes Data",
     sidebarLayout(
       sidebarPanel(
         selectInput("charts",
-                    label = "X Variable",
+                    label = "Correlate data with:",
                     choices = list( 
                       "Median Household Income" = "median_household_income", 
                       "Gini Index" = "gini_index", 
