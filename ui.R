@@ -46,7 +46,6 @@ shinyUI(navbarPage(tags$h1(
     sidebarLayout(
       sidebarPanel(
         selectInput("charts",
-<<<<<<< HEAD
                     label = "Correlate data with:",
                     choices = list( 
                       "Median Household Income" = "median_household_income", 
@@ -62,20 +61,3 @@ shinyUI(navbarPage(tags$h1(
     ) #sidebarLayout - Correlation Charts
   ) #tabPanel - Correlation Charts
 )) #navbarPage
-=======
-          label = "Correlate data with:",
-          choices = list(
-            "Median Household Income" = "median_household_income",
-            "Gini Index" = "gini_index",
-            "Population with HS Degree" =
-              "share_population_with_high_school_degree",
-            "Seasonal Unemployed" = "share_unemployed_seasonal"
-          ),
-          selected = "Median Household Income"
-        )
-      ), # sidebarPanel - Correlation Charts
-      mainPanel() # mainPanel - Correlation Charts
-    ) # sidebarLayout - Correlation Charts
-  ) # tabPanel - Correlation Charts
-)) # navbarPage
->>>>>>> 034a260594f32c17f6248b249b86427f5d537de9
