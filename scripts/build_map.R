@@ -29,13 +29,10 @@ build_map <- function(data, map_var) {
   # Plot
   p <- plot_geo(data, locationmode = "USA-states") %>%
     add_trace(
-<<<<<<< HEAD
-      z = data[,map.var], text = ~state, locations = ~code,
-      color = data[,map.var], colors = "RdYlBu"
-=======
-      z = data[, map_var], text = ~ state, locations = ~ code,
-      color = data[, map_var], colors = c("white", "purple4")
->>>>>>> 034a260594f32c17f6248b249b86427f5d537de9
+
+      z = data[,map_var], text = ~state, locations = ~code,
+      color = data[,map_var], colors = "RdYlBu"
+
     ) %>%
     colorbar(title = curr_color) %>%
     layout(
