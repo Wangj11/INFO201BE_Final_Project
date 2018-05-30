@@ -43,7 +43,7 @@ shinyUI(navbarPage(tags$h1("Data Crimes Data"),
               "share_population_with_high_school_degree",
             "Seasonal Unemployed" = "share_unemployed_seasonal"),
           selected = "Median Household Income")),
-      mainPanel(plotlyOutput("by_state")))),
+      mainPanel(plotlyOutput("static_map"), plotlyOutput("by_state")))),
   
   #Tab 3
   tabPanel(

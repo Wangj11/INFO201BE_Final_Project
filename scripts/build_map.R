@@ -38,13 +38,7 @@ build_map <- function(data, map_var) {
   return(p)
 }
 
-build_static_map <- function(data, map_var) {
-  if (map_var == "hate_crimes_per_100k_splc") {
-    curr_color <- "Income ($)"
-  }
-  else {
-    curr_color <- "Population (%)"
-  }
+build_static_map <- function(data, map_var = "hate_crimes_per_100k_splc") {
   # give state boundaries a white border
   l <- list(color = toRGB("white"), width = 2)
   
@@ -67,7 +61,7 @@ build_static_map <- function(data, map_var) {
       color = data[,map_var], colors = "RdYlBu"
       
     ) %>%
-    colorbar(title = curr_color) %>%
+    colorbar(title = "Crimes per 100k") %>%
     layout(
       title = str_to_title(gsub("_", " ", map_var)),
       geo = g
