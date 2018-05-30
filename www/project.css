@@ -3,6 +3,13 @@ div {
 
 }
 
+title {
+  font-size: 28px;
+  color: silver;
+  font-family: "Lucida Console";
+  text-shadow: 3px 3px 5px #000000;
+}
+
 h1 {
   font-size: 28px;
   color: silver;
@@ -22,4 +29,16 @@ h3 {
   color: white;
   font-family: "Courier New";
   text-shadow: 2px 2px 4px #000000;
+}
+
+h2:hover {
+	color: white;
+	background-color: grey;
+}
+
+p {
+	font-size: 14px;
+	color
+
+
 }
